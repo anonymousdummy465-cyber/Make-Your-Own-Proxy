@@ -28,7 +28,3 @@ Notes & security
 - This lightweight HTML rewriting uses regexes and is not as robust as using an HTML parser — it works for many simple pages (like lite.duckduckgo.com) but is not perfect.
 - Respect the target site's Terms of Service and robots.txt. Prefer official APIs for automated access.
 - For production, add TLS (run behind HTTPS), persistent logging, and stricter rate-limiting.
-
-If you want:
-- I can produce a version that uses an HTML parser for safer rewriting (will require an install), or
-- I can provide deployment instructions for common hosts (Render, Railway, Fly, etc.) that do not require local installs (they will take your repo and run the server in the cloud).
