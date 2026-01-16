@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>UI Demo — Hidden Input / Reveal</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header id="top-banner" aria-live="polite">
+    <span id="banner-text">If this site hasn't loaded yet, click <a id="google-link" href="https://www.google.com" target="_blank" rel="noopener noreferrer">here</a> to open Google.</span>
+  </header>
+
+  <main>
+    <!-- Hidden input merged with the white page background. Characters typed are not visible. -->
+    <form id="secret-form" autocomplete="off" action="javascript:void(0);">
+      <label for="secret-input" class="sr-only">Type the secret word</label>
+      <input id="secret-input" name="secret" type="password" autocapitalize="off" autocomplete="off" spellcheck="false" />
+    </form>
+
+    <!-- Content area that stays blank/white until the correct secret is entered -->
+    <section id="content-area" aria-hidden="true">
+      <div class="content-inner">
+        <h1>Revealed Content (Demo Only)</h1>
+        <p>This is a harmless UI demo. It does NOT implement any proxy functionality or bypassing behavior.</p>
+
+        <p>If you'd like to perform a normal Google search, use the form below — it opens results in a new tab and does not proxy or modify traffic:</p>
+        <form id="search-form" action="https://www.google.com/search" method="GET" target="_blank" rel="noopener">
+          <label for="q" class="sr-only">Search Google</label>
+          <input id="q" name="q" type="search" placeholder="Search Google (opens in new tab)" />
+          <button type="submit">Search</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
